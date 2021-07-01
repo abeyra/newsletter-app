@@ -1,7 +1,6 @@
 const bodyParser = require("body-parser");
 const request = require("request");
 const express = require("express");
-const port = Process.env.PORT || 3000;
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 const app = express();
@@ -64,7 +63,7 @@ app.post("/failure.html", function(req, res){
   res.redirect("/");
 });
 
-app.listen(port, function(){
+app.listen(Process.env.PORT || 3000, function(){
   console.log("Port 3000 online");
 });
 
