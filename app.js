@@ -13,8 +13,8 @@ app.get("/", function(req, res){
 
 // Mailchimp Parameters
 mailchimp.setConfig({
-  apiKey: "aa97e21b0c6379bc4083bb9af0e86737",
-  server: "us6",
+  apiKey: process.env.API_KEY,
+  server: process.env.SERVER,
 });
 
 
