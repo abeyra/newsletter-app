@@ -67,11 +67,3 @@ app.listen(process.env.PORT || 3000, function(){
   console.log("Port 3000 online");
 });
 
-// API KEY
-// aa97e21b0c6379bc4083bb9af0e86737-us6
-
-// Server
-// -us6
-
-// Audience ID
-// 8aae4d855d.
