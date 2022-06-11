@@ -2,6 +2,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const express = require("express");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
+require('dotenv').config();
 
 const app = express();
 app.use(express.static("public"));
@@ -16,7 +17,6 @@ mailchimp.setConfig({
   apiKey: process.env.API_KEY,
   server: process.env.SERVER,
 });
-
 
 app.post("/", function(req, res){
   const firstName = req.body.firstName;
